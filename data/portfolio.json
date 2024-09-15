@@ -1,0 +1,132 @@
+{
+  "name": "AJ Damalan",
+  "headerTaglineOne": "Hello!",
+  "headerTaglineTwo": "I'm AJ Damalan",
+  "headerTaglineThree": "Full Stack Developer",
+  "headerTaglineFour": " based in Philippines",
+  "showCursor": true,
+  "showBlog": true,
+  "darkMode": true,
+  "showResume": true,
+  "socials": [
+    {
+      "id": "1",
+      "title": "Github",
+      "link": "https://github.com/Aeth3",
+      "icon": "/images/github.svg"
+    },
+    {
+      "id": "2",
+      "title": "LinkedIn",
+      "link": "https://www.linkedin.com/in/ajdamalan/",
+      "icon": "/images/linkedin.svg"
+    },
+    {
+      "id": "3",
+      "title": "Facebook",
+      "link": "https://www.facebook.com/ajdamalan36",
+      "icon": "/images/facebook.svg"
+    },
+    {
+      "id": "4",
+      "title": "Gmail",
+      "link": "mailto:amajunriel.damalan@gmail.com",
+      "icon": "/images/gmail.svg"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "KAPWACO Water Billing System",
+      "description": "A project for our capstone made with CodeIgniter, MYSQL, HTML5, CSS, JQuery, and AJAX",
+      "imageSrc": "/images/capstone-system.png",
+      "url": "https://github.com/Aeth3/Web-Based-Water-Billing-Management-System"
+    },
+    {
+      "id": "2",
+      "title": "The Wild Oasis",
+      "description": "Made through my React course with React and Supabase",
+      "imageSrc": "/images/the-wild-oasis.png",
+      "url": "https://wild-aosis.vercel.app/Login"
+    },
+    {
+      "id": "3",
+      "title": "The Wild Oasis 2",
+      "description": "Made through my React course with Next.js and Supabase",
+      "imageSrc": "/images/the-wild-oasis-2.png",
+      "url": "https://the-wild-aosis-brown.vercel.app/"
+    },
+    {
+      "id": "4",
+      "title": "Social Media App",
+      "description": "A simple social media mobile app that can have chat feature made with Flutter and Firebase",
+      "imageSrc": "images/social-media-app.jpg",
+      "url": "https://github.com/Aeth3/chat_app"
+    },
+    {
+      "id": "5",
+      "title": "TikTok Clone App",
+      "description": "An attempt of cloning TikTok mobile app using Flutter",
+      "imageSrc": "images/tiktok.jpg",
+      "url": "http://chetanverma.com/"
+    },
+    {
+      "id": "6",
+      "title": "Project Six",
+      "description": "Design & Development",
+      "imageSrc": "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAyfHxwYXN0ZWx8ZW58MHx8MHw%3D&auto=format&fit=crop&w=400&q=60",
+      "url": "http://chetanverma.com/"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "title": "Art Direction",
+      "description": "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."
+    },
+    {
+      "id": "2",
+      "title": "Branding",
+      "description": "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."
+    },
+    {
+      "id": "3",
+      "title": "Web Design",
+      "description": "We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel."
+    },
+    {
+      "id": "4",
+      "title": "3D Design",
+      "description": "We combine creative design and technical skills to build striking 3D visualisations that bring your project to life."
+    }
+  ],
+  "aboutpara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  "resume": {
+    "tagline": "👋  I'm a software engineer, product designer.",
+    "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
+    "experiences": [
+      {
+        "id": "1",
+        "dates": "March 2022 - Present",
+        "type": "Full Time",
+        "position": "Frontend Engineer at X",
+        "bullets": "Bullet One, Bullet Two"
+      },
+      {
+        "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
+        "dates": "July 2020 - March 2022",
+        "type": "Full Time",
+        "position": "Frontend Engineer at X",
+        "bullets": "Worked on the frontend of a React application, Worked on the frontend of a React application"
+      }
+    ],
+    "education": {
+      "universityName": "University X",
+      "universityDate": "2016-2020",
+      "universityPara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+    },
+    "languages": ["Javascript", "HTML5", "CSS", "Python", "Dart"],
+    "frameworks": ["React", "Typescript", "NodeJs"],
+    "others": ["Figma", "AdobeXD", "AWS"]
+  }
+}
