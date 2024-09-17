@@ -14,6 +14,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const { name, showBlog, showResume } = data;
 
   useEffect(() => {
+    // This ensures the component is mounted before rendering
     setMounted(true);
   }, []);
 
@@ -31,7 +32,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </h1>
 
               <div className="flex items-center">
-                {data.darkMode && (
+                {data.darkMode && mounted && theme && (
                   <Button
                     onClick={() =>
                       setTheme(theme === "dark" ? "light" : "dark")
@@ -42,23 +43,27 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                       src={`/images/${
                         theme === "dark" ? "moon.svg" : "sun.svg"
                       }`}
-                    ></img>
+                      alt={theme === "dark" ? "moon icon" : "sun icon"}
+                    />
                   </Button>
                 )}
 
                 <Popover.Button>
-                  <img
-                    className="h-5"
-                    src={`/images/${
-                      !open
-                        ? theme === "dark"
-                          ? "menu-white.svg"
-                          : "menu.svg"
-                        : theme === "light"
-                        ? "cancel.svg"
-                        : "cancel-white.svg"
-                    }`}
-                  ></img>
+                  {mounted && (
+                    <img
+                      className="h-5"
+                      src={`/images/${
+                        !open
+                          ? theme === "dark"
+                            ? "menu-white.svg"
+                            : "menu.svg"
+                          : theme === "light"
+                          ? "cancel.svg"
+                          : "cancel-white.svg"
+                      }`}
+                      alt={open ? "close menu" : "open menu"}
+                    />
+                  )}
                 </Popover.Button>
               </div>
             </div>
@@ -85,7 +90,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
 
                   <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
+                    onClick={() =>
+                      window.open("mailto:amajunriel.damalan@gmail.com")
+                    }
                   >
                     Contact
                   </Button>
@@ -108,7 +115,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
 
                   <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
+                    onClick={() =>
+                      window.open("mailto:amajunriel.damalan@gmail.com")
+                    }
                   >
                     Contact
                   </Button>
@@ -155,7 +164,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 <img
                   className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                ></img>
+                  alt={theme === "dark" ? "moon icon" : "sun icon"}
+                />
               </Button>
             )}
           </div>
@@ -185,7 +195,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 <img
                   className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                ></img>
+                  alt={theme === "dark" ? "moon icon" : "sun icon"}
+                />
               </Button>
             )}
           </div>

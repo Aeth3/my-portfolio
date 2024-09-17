@@ -21,7 +21,7 @@ const BlogPost = ({ post }) => {
   useIsomorphicLayoutEffect(() => {
     stagger([textOne.current, textTwo.current], { y: 30 }, { y: 0 });
   }, []);
-
+  console.log(post.image)
   return (
     <>
       <Head>
@@ -41,7 +41,7 @@ const BlogPost = ({ post }) => {
             className="w-full h-96 rounded-lg shadow-lg object-cover"
             src={post.image}
             alt={post.title}
-          ></img>
+          />
           <h1
             ref={textOne}
             className="mt-10 text-4xl mob:text-2xl laptop:text-6xl text-bold"
