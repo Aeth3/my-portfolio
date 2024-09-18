@@ -112,6 +112,16 @@ export default function Home() {
                 </h1>
 
                 <div className="mt-5 flex flex-wrap gap-4">
+                  <div className="transition-transform duration-300 hover:scale-110">
+                    <svg
+                      height="50" // Set your desired height
+                      className={`${theme === "dark" ? "fill-slate-200" : ""}`}
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 128 128"
+                    >
+                      <path d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64c11.2 0 21.7-2.9 30.8-7.9L48.4 55.3v36.6h-6.8V41.8h6.8l50.5 75.8C116.4 106.2 128 86.5 128 64c0-35.3-28.7-64-64-64zm22.1 84.6l-7.5-11.3V41.8h7.5v42.8z" />
+                    </svg>
+                  </div>
                   <div className="transition-transform duration-300 hover:scale-110 hover:fill-yellow-600">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -239,7 +249,7 @@ export default function Home() {
             </div>
             <div className="flex justify-center">
               <div
-                className="rounded-full border-4 border-slate-200 w-52 h-52 tablet:w-64 tablet:h-64 bg-cover bg-center"
+                className="transition-transform duration-300 hover:scale-110 rounded-full border-4 border-slate-200 w-52 h-52 tablet:w-64 tablet:h-64 bg-cover bg-center"
                 style={{ backgroundImage: `url(${me.src})` }}
               ></div>
             </div>
@@ -287,7 +297,7 @@ export default function Home() {
             <img
               src="images/about.jpg"
               alt="about me"
-              className="mt-2 tablet:ml-10 relative rounded-lg overflow-hidden transition-all ease-out duration-300 mob:h-auto desktop:h-[17rem] laptopl:h-[25rem] tablet:h-64 laptop:h-[17rem]"
+              className="transition-transform duration-300 hover:scale-105 mt-2 tablet:ml-10 relative rounded-lg overflow-hidden transition-all ease-out duration-300 mob:h-auto desktop:h-[17rem] laptopl:h-[25rem] tablet:h-64 laptop:h-[17rem]"
             />
             <div className="laptop:w-3/5 tablet:w-1/2">
               <p className="text-center tablet:text-left mt-2 text-sm laptop:text-lg desktop:text-xl laptopl:text-2xl">

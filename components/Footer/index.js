@@ -38,7 +38,7 @@ const Footer = ({}) => {
               <img
                 src="/images/work-together.jpg"
                 alt="working together"
-                className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 mob:h-auto desktop:h-[17rem] laptopl:h-[22rem] tablet:h-64 laptop:h-[17rem]"
+                className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 mob:h-auto desktop:h-[17rem] laptopl:h-[22rem] tablet:h-64 laptop:h-[17rem] hover:scale-105"
               />
             </div>
           </div>
