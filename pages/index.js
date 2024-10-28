@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 import Head from "next/head";
 import Button from "../components/Button";
 import Link from "next/link";
-import Cursor from "../components/Cursor";
+
 import me from "../public/images/me.png";
 
 // Local Data
@@ -64,8 +64,7 @@ export default function Home() {
   const aboutText = data.aboutpara;
 
   return (
-    <div className={`relative ${data.showCursor && "cursor-none"}`}>
-      {data.showCursor && <Cursor />}
+    <div className={`relative `}>
       <Head>
         <title>{data.name}</title>
       </Head>
@@ -115,7 +114,7 @@ export default function Home() {
                   <div className="transition-transform duration-300 hover:scale-110">
                     <svg
                       height="50" // Set your desired height
-                      className={`${theme === "dark" ? "fill-slate-200" : ""}`}
+                      className={`${theme === "dark" ? "fill-slate-200" : "fill-slate-200"}`}
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 128 128"
                     >
@@ -140,7 +139,7 @@ export default function Home() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 640 512"
                       className={`${
-                        theme === "dark" ? "fill-indigo-600" : "fill-indigo-800"
+                        theme === "light" ? "fill-indigo-600" : "fill-indigo-800"
                       }`}
                     >
                       <title>PHP</title>
@@ -153,7 +152,7 @@ export default function Home() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
                       className={`${
-                        theme === "dark" ? "fill-indigo-600" : "fill-blue-700"
+                        theme === "light" ? "fill-indigo-600" : "fill-blue-700"
                       }`}
                     >
                       <title>React.js</title>

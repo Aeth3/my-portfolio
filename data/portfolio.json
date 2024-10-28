@@ -4,7 +4,6 @@
   "headerTaglineTwo": "I'm AJ Damalan",
   "headerTaglineThree": "Full Stack Developer",
   "headerTaglineFour": " based in Philippines",
-  "showCursor": true,
   "showBlog": true,
   "darkMode": true,
   "showResume": true,
@@ -130,10 +129,10 @@
     "education": {
       "universityName": "Mindanao State University at Naawan",
       "universityDate": "--",
-      "universityPara": "Graduated with a Bachelor of Science in Information Technology major in Database Systems."
+      "universityPara": "A graduate of Bachelor of Science in Information Technology major in Database Systems."
     },
     "languages": ["Javascript", "Python", "Dart", "PHP", "R", "Java", "C"],
-    "frameworks": ["Vue", "Node.js", "Laravel", "Flutter"],
+    "frameworks": ["Vue.js", "Node.js", "Laravel", "Flutter"],
     "others": [
       "Figma",
       "AdobeXD",

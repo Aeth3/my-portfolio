@@ -6,14 +6,13 @@ import { useTheme } from "next-themes";
 
 // Data
 import yourData from "../data/portfolio.json";
-import Cursor from "../components/Cursor";
 
 const Edit = () => {
   // states
   const [data, setData] = useState(yourData);
   const [currentTabs, setCurrentTabs] = useState("HEADER");
   const { theme } = useTheme();
-
+  
   const saveData = () => {
     if (process.env.NODE_ENV === "development") {
       fetch("/api/portfolio", {
@@ -47,14 +46,14 @@ const Edit = () => {
           imageSrc:
             "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAyfHxwYXN0ZWx8ZW58MHx8MHw%3D&auto=format&fit=crop&w=400&q=60",
 
-          url: "http://chetanverma.com/",
+          url: "",
         },
       ],
     });
   };
 
   const deleteProject = (id) => {
-    const copyProjects = data.projects;
+    let copyProjects = data.projects;
     copyProjects = copyProjects.filter((project) => project.id !== id);
     setData({ ...data, projects: copyProjects });
   };
@@ -83,7 +82,7 @@ const Edit = () => {
   };
 
   const deleteService = (id) => {
-    const copyServices = data.services;
+    let copyServices = data.services;
     copyServices = copyServices.filter((service) => service.id !== id);
     setData({ ...data, services: copyServices });
   };
@@ -111,7 +110,7 @@ const Edit = () => {
   };
 
   const deleteSocials = (id) => {
-    const copySocials = data.socials;
+    let copySocials = data.socials;
     copySocials = copySocials.filter((social) => social.id !== id);
     setData({ ...data, socials: copySocials });
   };
@@ -147,9 +146,8 @@ const Edit = () => {
   };
 
   return (
-    <div className={`container mx-auto ${data.showCursor && "cursor-none"}`}>
+    <div className={`container mx-auto `}>
       <Header isBlog></Header>
-      {data.showCursor && <Cursor />}
       <div className="mt-10">
         <div className={`${theme === "dark" ? "bg-transparent" : "bg-white"}`}>
           <div className="flex items-center justify-between">
@@ -321,25 +319,6 @@ const Edit = () => {
                 </Button>
               </div>
             </div>
-            <div className="mt-5 flex items-center">
-              <label className="w-1/5 text-lg opacity-50">Custom Cursor</label>
-              <div className="w-4/5 ml-10 flex items-center">
-                <Button
-                  onClick={() => setData({ ...data, showCursor: true })}
-                  type={data.showCursor && "primary"}
-                >
-                  Yes
-                </Button>
-                <Button
-                  onClick={() => setData({ ...data, showCursor: false })}
-                  classes={
-                    !data.showCursor && "bg-red-500 text-white hover:bg-red-600"
-                  }
-                >
-                  No
-                </Button>
-              </div>
-            </div>
           </div>
         )}
         {/* PROJECTS */}
@@ -347,7 +326,7 @@ const Edit = () => {
           <>
             <div className="mt-10">
               {data.projects.map((project, index) => (
-                <div className="mt-10" key={project.id}>
+                <div className="mt-10" key={index}>
                   <div className="flex items-center justify-between">
                     <h1 className="text-2xl">{project.title}</h1>
                     <Button
@@ -435,7 +414,7 @@ const Edit = () => {
           <>
             <div className="mt-10">
               {data.services.map((service, index) => (
-                <div key={service.id}>
+                <div key={index}>
                   <div className="flex items-center justify-between">
                     <h1 className="text-2xl">{service.title}</h1>
                     <Button
@@ -498,8 +477,7 @@ const Edit = () => {
         {currentTabs === "SOCIAL" && (
           <div className="mt-10">
             {data.socials.map((social, index) => (
-              <>
-                <div key={social.id}>
+                <div key={index}>
                   <div className="flex items-center justify-between">
                     <h1 className="text-2xl">{social.title}</h1>
                     <Button
@@ -539,7 +517,6 @@ const Edit = () => {
                   </div>
                   <hr className="my-10"></hr>
                 </div>
-              </>
             ))}
             <div className="my-10">
               <Button onClick={addSocials} type="primary">
@@ -583,7 +560,7 @@ const Edit = () => {
             <h1>Experiences</h1>
             <div className="mt-10">
               {data.resume.experiences.map((experiences, index) => (
-                <div className="mt-5" key={experiences.id}>
+                <div className="mt-5" key={index}>
                   <div className="flex items-center justify-between">
                     <h1 className="text-2xl">{experiences.position}</h1>
                     <Button

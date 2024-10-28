@@ -17,7 +17,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
     // This ensures the component is mounted before rendering
     setMounted(true);
   }, []);
-
+  if (!mounted) return null; // Avoid rendering until mounted
   return (
     <>
       <Popover className="block tablet:hidden mt-5">
@@ -82,7 +82,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   {showResume && (
                     <Button
                       onClick={() =>
-                        window.open("mailto:hello@chetanverma.com")
+                        window.open("mailto:amajunriel.damalan@gmail.com")
                       }
                     >
                       Resume
@@ -134,7 +134,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
       >
         <h1
           onClick={() => router.push("/")}
-          className="font-medium cursor-pointer mob:p-2 laptop:p-0"
+          className="font-medium mob:p-2 laptop:p-0"
         >
           {name}.
         </h1>
@@ -154,7 +154,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
+            <Button onClick={() => window.open("mailto:amajunriel.damalan@gmail.com")}>
               Contact
             </Button>
             {mounted && theme && data.darkMode && (
@@ -184,7 +184,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
+            <Button onClick={() => window.open("mailto:amajunriel.damalan@gmail.com")}>
               Contact
             </Button>
 
