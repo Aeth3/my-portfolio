@@ -1,0 +1,13 @@
+/* loader.module.css */
+.loaderOverlay {
+  position: fixed; /* Use fixed positioning to cover the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Use flexbox to center */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 9999; /* Make sure it’s above other content */
+  pointer-events: none; /* Make the overlay non-clickable */
+}

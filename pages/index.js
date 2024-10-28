@@ -9,12 +9,12 @@ import Footer from "../components/Footer";
 import Head from "next/head";
 import Button from "../components/Button";
 import Link from "next/link";
-
 import me from "../public/images/me.png";
 
 // Local Data
 import data from "../data/portfolio.json";
 import { useTheme } from "next-themes";
+import Loader from "../components/Loader/loader";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -25,7 +25,18 @@ export default function Home() {
   const textTwo = useRef();
   const textThree = useRef();
   const textFour = useRef();
+  const [mounted, setMounted] = useState(false);
 
+  useEffect(() => {
+    // Set the mounted state to true once the component has finished mounting
+    const timer = setTimeout(() => {
+      setMounted(true);
+    }, 1000); // Optional delay to show the loader for 1 second
+
+    return () => clearTimeout(timer); // Clean up the timer
+  }, []);
+
+  
   // Handling Scroll
   const handleWorkScroll = () => {
     window.scrollTo({
@@ -44,11 +55,14 @@ export default function Home() {
   };
 
   useIsomorphicLayoutEffect(() => {
-    stagger(
-      [textTwo.current, textThree.current, textFour.current],
-      { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
-      { y: 0, x: 0, transform: "scale(1)" }
-    );
+    if(mounted){
+      stagger(
+        [textTwo.current, textThree.current, textFour.current],
+        { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
+        { y: 0, x: 0, transform: "scale(1)" }
+      );
+    }
+   
   }, []);
 
   // State to toggle between "See More" and "See Less"
@@ -62,7 +76,10 @@ export default function Home() {
   // Define the number of characters to show when collapsed
   const truncatedTextLength = 300;
   const aboutText = data.aboutpara;
-
+  if (!mounted) {
+    // Render the loader while waiting for the component to mount
+    return <Loader/>;
+  }
   return (
     <div className={`relative `}>
       <Head>
@@ -114,7 +131,7 @@ export default function Home() {
                   <div className="transition-transform duration-300 hover:scale-110">
                     <svg
                       height="50" // Set your desired height
-                      className={`${theme === "dark" ? "fill-slate-200" : "fill-slate-200"}`}
+                      className={`${theme === "light" ? "fill-slate-950" : "fill-slate-200"}`}
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 128 128"
                     >
