@@ -103,7 +103,7 @@
   "aboutpara": "My journey as a web developer was full of amazing experiences. I started my career in IT field when I was still an intern, and I have learned a lot from building websites to setting up WPEngines. Through their training, I acquired many skills including PHP, WordPress, HTML & CSS, and proper work etiquette. After my internship, I got a chance to teach on a private school. This improved my interpersonal skills greatly as well as my technical skills. Right now, I am a full stack developer in a growing start-up company making web applications using Laravel, Vue, jQuery, HTML5, CSS. On my free time, I am currently learning React and Next.js because I want to create websites for a hobby. Slowly but surely, it is!",
   "resume": {
     "tagline": "👋 I'm a full stack web developer.",
-    "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, JavaScript, Laravel, Vue, and most of the Web frameworks. Also developed mobile applications through Flutter framework.",
+    "description": "I have delivered world-class user experiences to numerous clients. Well-versed with React, JavaScript, PHP, Laravel, and Vue. Also developed mobile applications through Flutter framework.",
     "experiences": [
       {
         "id": "1",
@@ -117,7 +117,7 @@
         "dates": "August 2023 - May 2024",
         "type": "Full Time",
         "position": "ICT Teacher",
-        "bullets": "Teaching senior high school students theories of technologies and giving hands on activities like making websites videos and other technology related subjects "
+        "bullets": "Teaching senior high school students theories of technologies and giving hands on activities like making websites and other technology related subjects "
       },
       {
         "id": "3",
@@ -129,11 +129,11 @@
     ],
     "education": {
       "universityName": "Mindanao State University at Naawan",
-      "universityDate": "2019 - 2023",
+      "universityDate": "--",
       "universityPara": "Graduated with a Bachelor of Science in Information Technology major in Database Systems."
     },
     "languages": ["Javascript", "Python", "Dart", "PHP", "R", "Java", "C"],
-    "frameworks": ["React", "Vue", "Node.js", "Laravel", "Flutter"],
+    "frameworks": ["Vue", "Node.js", "Laravel", "Flutter"],
     "others": [
       "Figma",
       "AdobeXD",
