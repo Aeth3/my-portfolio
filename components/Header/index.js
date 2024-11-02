@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import Button from "../Button";
 // Local Data
 import data from "../../data/portfolio.json";
+import Loader from "../Loader/loader";
 
 const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const router = useRouter();
@@ -17,7 +18,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
     // This ensures the component is mounted before rendering
     setMounted(true);
   }, []);
-  if (!mounted) return null; // Avoid rendering until mounted
+  if (!mounted) return <Loader />; // Avoid rendering until mounted
   return (
     <>
       <Popover className="block tablet:hidden mt-5">
@@ -154,7 +155,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:amajunriel.damalan@gmail.com")}>
+            <Button
+              onClick={() => window.open("mailto:amajunriel.damalan@gmail.com")}
+            >
               Contact
             </Button>
             {mounted && theme && data.darkMode && (
@@ -184,7 +187,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:amajunriel.damalan@gmail.com")}>
+            <Button
+              onClick={() => window.open("mailto:amajunriel.damalan@gmail.com")}
+            >
               Contact
             </Button>
 

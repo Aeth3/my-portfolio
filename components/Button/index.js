@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import data from "../../data/portfolio.json";
+import Loader from "../Loader/loader";
 
 // Use React.forwardRef to allow passing refs to the button
 const Button = React.forwardRef(({ children, type, onClick, classes }, ref) => {
@@ -11,7 +12,7 @@ const Button = React.forwardRef(({ children, type, onClick, classes }, ref) => {
     // This ensures the component is mounted before rendering
     setMounted(true);
   }, []);
-  if (!mounted) return null; // Avoid rendering until mounted
+  if (!mounted) return <Loader />; // Avoid rendering until mounted
 
   if (type === "primary") {
     return (
