@@ -36,7 +36,6 @@ export default function Home() {
     return () => clearTimeout(timer); // Clean up the timer
   }, []);
 
-  
   // Handling Scroll
   const handleWorkScroll = () => {
     window.scrollTo({
@@ -55,14 +54,13 @@ export default function Home() {
   };
 
   useIsomorphicLayoutEffect(() => {
-    if(mounted){
+    if (mounted) {
       stagger(
         [textTwo.current, textThree.current, textFour.current],
         { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
         { y: 0, x: 0, transform: "scale(1)" }
       );
     }
-   
   }, []);
 
   // State to toggle between "See More" and "See Less"
@@ -78,7 +76,7 @@ export default function Home() {
   const aboutText = data.aboutpara;
   if (!mounted) {
     // Render the loader while waiting for the component to mount
-    return <Loader/>;
+    return <Loader />;
   }
   return (
     <div className={`relative `}>
@@ -131,7 +129,9 @@ export default function Home() {
                   <div className="transition-transform duration-300 hover:scale-110">
                     <svg
                       height="50" // Set your desired height
-                      className={`${theme === "light" ? "fill-slate-950" : "fill-slate-200"}`}
+                      className={`${
+                        theme === "light" ? "fill-slate-950" : "fill-slate-200"
+                      }`}
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 128 128"
                     >
@@ -150,13 +150,31 @@ export default function Home() {
                       <path d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z" />
                     </svg>
                   </div>
+                  <div className="transition-transform duration-300 hover:scale-110">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 128 128"
+                      width="45"
+                      height="50"
+                      className=""
+                    >
+                      <title>TypeScript</title>
+                      <path
+                        data-name="original"
+                        fill="#007acc"
+                        d="M1.5 63.91v62.5h125v-125H1.5zm100.73-5a15.56 15.56 0 017.82 4.5 20.58 20.58 0 013 4c0 .16-5.4 3.81-8.69 5.85-.12.08-.6-.44-1.13-1.23a7.09 7.09 0 00-5.87-3.53c-3.79-.26-6.23 1.73-6.21 5a4.58 4.58 0 00.54 2.34c.83 1.73 2.38 2.76 7.24 4.86 8.95 3.85 12.78 6.39 15.16 10 2.66 4 3.25 10.46 1.45 15.24-2 5.2-6.9 8.73-13.83 9.9a38.32 38.32 0 01-9.52-.1 23 23 0 01-12.72-6.63c-1.15-1.27-3.39-4.58-3.25-4.82a9.34 9.34 0 011.15-.73L82 101l3.59-2.08.75 1.11a16.78 16.78 0 004.74 4.54c4 2.1 9.46 1.81 12.16-.62a5.43 5.43 0 00.69-6.92c-1-1.39-3-2.56-8.59-5-6.45-2.78-9.23-4.5-11.77-7.24a16.48 16.48 0 01-3.43-6.25 25 25 0 01-.22-8c1.33-6.23 6-10.58 12.82-11.87a31.66 31.66 0 019.49.26zm-29.34 5.24v5.12H56.66v46.23H45.15V69.26H28.88v-5a49.19 49.19 0 01.12-5.17C29.08 59 39 59 51 59h21.83z"
+                      />
+                    </svg>
+                  </div>
                   <div className="transition-transform duration-300 hover:scale-110 hover:fill-indigo-900">
                     <svg
                       height="50"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 640 512"
                       className={`${
-                        theme === "light" ? "fill-indigo-600" : "fill-indigo-800"
+                        theme === "light"
+                          ? "fill-indigo-600"
+                          : "fill-indigo-800"
                       }`}
                     >
                       <title>PHP</title>
