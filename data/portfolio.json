@@ -131,7 +131,16 @@
       "universityDate": "--",
       "universityPara": "A graduate of Bachelor of Science in Information Technology major in Database Systems."
     },
-    "languages": ["Javascript", "Python", "Dart", "PHP", "R", "Java", "C"],
+    "languages": [
+      "Javascript",
+      "TypeScript",
+      "Python",
+      "Dart",
+      "PHP",
+      "R",
+      "Java",
+      "C"
+    ],
     "frameworks": ["Vue.js", "Node.js", "Laravel", "Flutter"],
     "others": [
       "Figma",
